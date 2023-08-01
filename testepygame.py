@@ -13,8 +13,23 @@ def draw():
 
 
 gameLoop = True
+isPressingW = False
 
-if __name__ == "__main__":
-    while gameLoop:        
+if __name__ == "__main__": #Configuração de teclas de atalho
+    while gameLoop:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                gameLoop = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_w:
+                    isPressingW = True
+                    print("Tecla W pressionada")
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_w:
+                    isPressingW = False
+                    print("Tecla W soltada")
+
         draw() 
         pygame.display.update()
+
+print("Fechando jogo...")
