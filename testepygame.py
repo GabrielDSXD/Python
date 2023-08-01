@@ -3,6 +3,8 @@ import pygame
 #Inicializando o Pygame e criando a Janela
 pygame.init()
 
+print("Iniciando jogo...")
+
 display = pygame.display.set_mode([840, 480]) #Tamanho da janela
 pygame.display.set_caption("Estruturas de dados") #Nome da janela
 
